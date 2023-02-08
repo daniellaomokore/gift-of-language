@@ -1,0 +1,131 @@
+from flask import request, flash, session, render_template, redirect, url_for
+from sqlalchemy import or_
+from werkzeug.security import generate_password_hash, check_password_hash
+from . import app, connect_to_api, database
+from boredapp.giftOfLanguageFunctions import is_user_logged_in, get_user_id, get_user_firstname, \
+    display_the_activity, check_if_activity_is_in_favourites
+import re
+from boredapp.models import TheUsers, Favourites
+from boredapp.forms import SignUpForm, LogInForm, ForgotPassword
+
+
+
+#The web apps homepage
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+#The log in page
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    clicked = False
+    log_in_right = False
+    userid = 0
+    if request.method == 'POST':
+        clicked = True
+        form = request.form
+        print(form)
+        login_details = get_login_details(form)
+        log_in_right = login_details[0]
+        column = login_details[1]
+        value = login_details[2]
+        if log_in_right:
+            userid = get_user_by_column(column, value)
+        # print(form) # returns ImmutableMultiDict([('logintype', 'u'), ('username', 'hi'), ('password', 'Chrissie'), ('next', 'Next')])
+    return render_template('login.html', userid=userid, clicked=clicked, log_in_right=log_in_right)
+
+
+# the sign up page
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    clicked = False
+    firstname = None
+    userid = 0
+    duplicate = False
+    passed_regex_check = False
+    if request.method == 'POST':
+        clicked = True
+        form = request.form
+        signupdetails = get_signup_details(form)
+        firstname = signupdetails[0]
+        email = signupdetails[1]
+        duplicate = signupdetails[2]
+        passed_regex_check = signupdetails[3]
+        if email is not None:
+            userid = get_user_by_column('Email', email)
+        # print(form)
+    return render_template('signup.html', clicked=clicked, passed_regex_check=passed_regex_check, duplicate=duplicate,
+                           userid=userid, firstname=firstname)
+
+
+#a page where the user can search for a word's definition
+@app.route('/searchword/<int:userid>', methods=['GET', 'POST'])
+def searchword_by_id(userid):
+    users = get_user_by_id(userid)
+    userid = users[0][0]
+    firstname = users[0][1]
+    clicked = False
+    word_searched = ''
+    if request.method == 'POST':
+        clicked = True
+        form = request.form
+        # print(form)
+        the_word = form['searchword']
+        word_searched = show_word_and_definition(the_word)
+        add_searched_word(the_word, userid)
+        # add in the search word function
+    return render_template('searchword.html', firstname=firstname, userid=userid, clicked=clicked,
+                           word_searched=word_searched)
+
+#a page where the user can get a random word and definiton
+@app.route('/wordofday/<int:userid>', methods=['GET', 'POST'])
+def wordofday_by_id(userid):
+    users = get_user_by_id(userid)
+    userid = users[0][0]
+    clicked = False
+    word = ''
+    definition = ''
+    firstname = users[0][1]
+    if request.method == 'POST':
+        clicked = True
+        word_of_day = randomWordGenerator()
+        word = word_of_day[0]
+        definition = word_of_day[1]
+    return render_template('wordofday.html', firstname=firstname, userid=userid, word=word, definition=definition,
+                           clicked=clicked)
+
+#a page that displays all the users previously searched words
+@app.route('/wordssearched/<int:userid>', methods=['GET', 'POST'])
+def wordssearched_by_id(userid):
+    users = get_user_by_id(userid)
+    userid = users[0][0]
+    firstname = users[0][1]
+    users_searched_words = display_users_searched_word(userid)
+    return render_template('previouslysearchedwords.html', firstname=firstname, userid=userid,
+                           users_searched_words=users_searched_words)
+
+#a page where the user can set a timed word
+@app.route('/timedword/<int:userid>', methods=['GET', 'POST'])
+def timed_word(userid):
+    users = get_user_by_id(userid)
+    userid = users[0][0]
+    firstname = users[0][1]
+    chosen_time = 0
+    if request.method == 'POST':
+        form = request.form
+        chosen_time = form['time']
+        schedule.every().day.at("{}".format(chosen_time)).do(randomWordGenerator)
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+    return render_template('timedword.html', userid=userid, firstname=firstname, chosen_time=chosen_time)
+
+
+# THIS IS A SECRET PAGE ON THE WEB APP WHERE YOU CAN SEE HOW THE STATS FOR THE SEARCHED WORDS
+# (WHAT WORDS HAVE BEEN SEARCHED AND HOW MANY TIMES)
+# http://127.0.0.1:5001/searched-words-statistics
+@app.route('/searched-words-statistics')
+def searched_words_stats():
+    all_searched_words = get_all_searched_words()
+    c_searched_list = Counter(all_searched_words)
+    return c_searched_list
