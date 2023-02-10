@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ba1349-a8a5-47e8-952b-bbc43df57b27" name="Changes" comment="regex decorator">
-      <change afterPath="$PROJECT_DIR$/boredapp/Database/createDatabase.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Static/images/gol_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Static/resource/english.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/previouslysearchedwords.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/searchword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/timedword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/Templates/wordofday.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/giftOfLanguageFunctions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boredapp/src/RawBoredApp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boredapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/boredapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boredapp/giftOfLanguageFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/boredapp/giftOfLanguageFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boredapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/boredapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boredapp/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/boredapp/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gol_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/gol_users.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,16 +41,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Others/Documents/GitHub/gift-of-language/gift-of-language/boredapp",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Others/Documents/GitHub/gift-of-language/gift-of-language/boredapp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Others\Documents\GitHub\gift-of-language\gift-of-language\boredapp" />

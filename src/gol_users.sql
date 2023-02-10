@@ -14,11 +14,9 @@ CREATE TABLE the_users (
 	UserPassword varchar(65),
 	LastLogin DATE,
 	UserStreak Int,
-    
 CONSTRAINT
     pk_user_id PRIMARY KEY (UserID));
-    
-    
+
     CREATE TABLE searched_words (
 	SearchedWordID int(100) AUTO_INCREMENT,
 	UserID int(10),

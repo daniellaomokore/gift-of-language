@@ -27,12 +27,3 @@ class LogInForm(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Log in")
 
-
-# Form for forgot password
-class ForgotPassword(FlaskForm):
-
-    """
-        This class creates a submission form for the user forgot password form
-    """
-    emailOrUsername = StringField("emailOrUsername:", validators=[DataRequired()])
-    submit = SubmitField("Reset Password")

@@ -1,3 +1,5 @@
+import datetime
+
 import sqlalchemy
 from boredapp import database
 
@@ -31,24 +33,29 @@ class TheUsers(Base):
         self.Password = Password
 
 
-class Favourites(Base):
-    __tablename__ = 'favourites'
+class TheUsers(Base):
+    __tablename__ = 'the_users'
 
-    activityID = database.Column(database.Integer, primary_key=True, nullable=False)
+    UserID = database.Column(database.Integer, primary_key=True, nullable=False, autoincrement=True)
+    FirstName = database.Column(database.String(65), nullable=False)
+    LastName = database.Column(database.String(65), nullable=False)
+    Email = database.Column(database.String(255), unique=True)
+    DOB = database.Column(database.DateTime, nullable=False)
+    City = database.Column(database.String(65), nullable=False)
+    Username = database.Column(database.String(65), unique=True)
+    UserPassword = database.Column(database.String(65), nullable=False)
+    LastLogin = database.Column(database.DateTime)
+    UserStreak = database.Column(database.Integer)
+
+
+class TheUsers(Base):
+    __tablename__ = 'the_users'
+
+    SearchedWordID = database.Column(database.Integer, primary_key=True, nullable=False, autoincrement=True)
     UserID = database.Column(database.Integer, database.ForeignKey('the_users.UserID'), nullable=False)
-    activity = database.Column(database.String(200), nullable=False)
-    participants = database.Column(database.Integer, nullable=False)
-    price = database.Column(database.Float, nullable=False)
-    type = database.Column(database.String(200), nullable=False)
-
-    def __init__(self, activityID, UserID, activity, participants, price, type):
-        self.activityID = activityID
-        self.UserID = UserID
-        self.activity = activity
-        self.participants = participants
-        self.price = price
-        self.type = type
-
+    word = database.Column(database.String(65), nullable=False)
+    definition_ = database.Column(database.String(6000), nullable=False)
+    date_accessed = database.Column(database.TIMESTAMP, nullable=False, default=datetime.datetime.utcnow)
 
 engine = create_engine("mysql+mysqlconnector://{user}:{password}@{host}/{DatabaseName}".format(
     user=USER,
