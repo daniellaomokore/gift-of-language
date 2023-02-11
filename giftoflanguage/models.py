@@ -1,12 +1,12 @@
 import datetime
 
 import sqlalchemy
-from boredapp import database
+from giftoflanguage import database
 
 if __name__ == '__main__':
     from config import DATABASEPASSWORD, DATABASENAME, HOST, USER
 else:
-    from boredapp.config import DATABASEPASSWORD, DATABASENAME, USER, HOST
+    from giftoflanguage.config import DATABASEPASSWORD, DATABASENAME, USER, HOST
 from sqlalchemy import create_engine, orm
 
 Base = sqlalchemy.orm.declarative_base()

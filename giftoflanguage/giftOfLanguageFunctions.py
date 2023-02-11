@@ -1,7 +1,11 @@
+import itertools
+import random
+
+import requests
 from flask import session
 from sqlalchemy import and_
-from boredapp import database, connect_to_api
-from boredapp.models import TheUsers, Favourites
+from giftoflanguage import database, connect_to_api
+from giftoflanguage.models import TheUsers, Favourites
 
 APIurl = "http://www.boredapi.com/api/activity"
 

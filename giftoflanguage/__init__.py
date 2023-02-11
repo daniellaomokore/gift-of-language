@@ -2,8 +2,8 @@ import json
 
 import requests
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy#
-from boredapp.config import DATABASEPASSWORD, DATABASENAME, SECRET_KEY
+from flask_sqlalchemy import SQLAlchemy
+from giftoflanguage.config import DATABASEPASSWORD, DATABASENAME, SECRET_KEY
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = f"{SECRET_KEY}"  # secret key for the WTForm forms you create
@@ -22,4 +22,4 @@ def connect_to_api(url):
 
 
 
-from boredapp import routes
+from giftoflanguage import routes
