@@ -10,7 +10,7 @@ import random
 # GENERATING THE RANDOM WORD FOR USERS DAILY WORD
 def randomWordGenerator():
     # Converting the text file of the dictionary words into a list of strings
-    with open("../docs/english.txt", encoding="utf8") as wordDictionary:
+    with open("../flask/static/resource/english.txt", encoding="utf8") as wordDictionary:
         wordDictionaryList = []  # the wordDictionary in list form
         for line in wordDictionary:
             wordDictionaryList.append(line.strip())

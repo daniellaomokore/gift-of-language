@@ -1,12 +1,16 @@
-
-
 import os
+from dotenv import load_dotenv
 
+# load environmental variables
+load_dotenv()
 
 # Mysqlworkbench
+# environmental variables stored
 
-DATABASENAME = os.environ.get('DATABASENAME')
+DATABASENAME = "gol_users"
 USER = os.environ.get('USER')
-PASSWORD = os.environ.get('DATABASEPASSWORD') # THIS IS YOUR MYSQLWORKBENCH PASSWORD
+DATABASEPASSWORD = os.environ.get('DATABASEPASSWORD')  # THIS IS YOUR MYSQLWORKBENCH PASSWORD
 HOST = os.environ.get('HOST')
 
+# secret key
+SECRET_KEY = os.environ.get('SECRET_KEY')

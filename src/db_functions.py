@@ -1,5 +1,5 @@
 import mysql.connector
-from config import USER, HOST, PASSWORD
+from config import USER, HOST, DATABASEPASSWORD,DATABASENAME
 import re
 
 
@@ -10,9 +10,9 @@ def _connect_to_db(db_name):
     connection = mysql.connector.connect(
         host=HOST,
         user=USER,
-        password=PASSWORD,
+        password=DATABASEPASSWORD,
         auth_plugin='mysql_native_password',
-        database=db_name
+        database=DATABASENAME
     )
     return connection
 

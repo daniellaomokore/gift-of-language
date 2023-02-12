@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
-    <title>Previous searched word page</title>
-</head>
-<body>
-    <div class="topnav">
-        <a href="{{ url_for('searchword_by_id', userid=userid) }}" >SEARCH FOR WORD</a>
-        <a href="{{ url_for('wordofday_by_id', userid=userid) }}">WORD OF THE DAY</a>
-        <a class="active" href="">PREVIOUSLY SEARCHED WORDS</a>
-        <a href="{{ url_for('timed_word', userid=userid) }}">SCHEDULE A WORD</a>
-        <a href="http://127.0.0.1:5001">LOG OUT</a>
-    </div>
+{% extends "baseNav.html" %}
+
+{% block title %}Previous Searched Word Page{% endblock %}
+
+
+{% block content %}
+
     <br>
     <br>
     <h1>{{ firstname }}'s searched words:</h1>
@@ -24,5 +13,6 @@
         <li>{{ i[0] }} - {{ i[1] }}</li>
     {%endfor%}
     </ul>
-</body>
-</html>
+
+
+{% endblock %}
