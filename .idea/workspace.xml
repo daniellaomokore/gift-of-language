@@ -5,27 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6ba1349-a8a5-47e8-952b-bbc43df57b27" name="Changes" comment="regex decorator">
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Database/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Database/createDatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Static/images/gol_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Static/images/gol_image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Static/resource/english.txt" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Static/resource/english.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/previouslysearchedwords.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/previouslysearchedwords.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/searchword.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/searchword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/timedword.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/timedword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/Templates/wordofday.html" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/Templates/wordofday.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/giftOfLanguageFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/giftOfLanguageFunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boredapp/src/RawBoredApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/RawBoredApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/english.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/GOL_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/flask/GOL_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/static/css.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/static/gol_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/previouslysearchedwords.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/searchword.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/timedword.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/wordofday.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/giftoflanguage/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/giftoflanguage/giftOfLanguageFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/giftoflanguage/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/giftoflanguage/src/RawBoredApp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/daily_words.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/daily_words.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/db_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db_searched_words.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/db_searched_words.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionary_api_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/dictionary_api_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gol_streaks_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/gol_streaks_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gol_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/gol_users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_interface_python_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/login_interface_python_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unit_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/giftoflanguage/src/unit_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,16 +60,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Others/Documents/GitHub/gift-of-language/gift-of-language",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Others/Documents/GitHub/gift-of-language/gift-of-language&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Others\Documents\GitHub\gift-of-language\gift-of-language" />
@@ -75,11 +79,11 @@
       <recent name="C:\Users\Others\Documents\GitHub\gift-of-language\gift-of-language\boredapp\Static\resource" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Others\Documents\GitHub\gift-of-language\gift-of-language\giftoflanguage" />
       <recent name="C:\Users\danie\OneDrive\Desktop\gift-of-language\docs" />
       <recent name="C:\Users\danie\OneDrive\Desktop\gift-of-language" />
       <recent name="C:\Users\danie\OneDrive\Desktop\gift-of-language\flask" />
       <recent name="C:\Users\danie\OneDrive\Desktop\gift-of-language\src" />
-      <recent name="C:\Users\danie\OneDrive\Desktop\gift-of-language\tests" />
     </key>
   </component>
   <component name="RunManager">

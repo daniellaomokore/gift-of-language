@@ -1,4 +1,4 @@
-from src.db_functions import _connect_to_db, does_user_exist, new_user_credentials, username_and_password_match
+from giftoflanguage.src.db_functions import _connect_to_db, does_user_exist, new_user_credentials, username_and_password_match
 from db_functions import check_if_valid_username, get_user_by_column
 from gol_streaks_functions import run_the_userstreak_function
 

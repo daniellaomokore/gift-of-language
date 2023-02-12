@@ -1,18 +1,15 @@
 import time
 from collections import Counter
-
 import schedule
-from flask import request, flash, session, render_template, redirect, url_for
-from sqlalchemy import or_
-from werkzeug.security import generate_password_hash, check_password_hash
-from . import app, connect_to_api, database
-from giftoflanguage.giftOfLanguageFunctions import get_login_details, get_user_by_column, get_signup_details, \
-    get_user_by_id, show_word_and_definition, add_searched_word, randomWordGenerator, display_users_searched_word, \
-    get_all_searched_words
-import re
-from giftoflanguage.models import TheUsers, Favourites
-from giftoflanguage.forms import SignUpForm, LogInForm, ForgotPassword
 
+
+from flask.GOL_api import get_login_details, get_signup_details
+from giftoflanguage.src.daily_words import randomWordGenerator
+from giftoflanguage.src.db_functions import get_user_by_id, get_user_by_column
+from giftoflanguage.src.db_searched_words import get_all_searched_words, display_users_searched_word, add_searched_word
+from giftoflanguage.src.dictionary_api_functions import show_word_and_definition
+
+app = Flask(__name__)
 
 
 #The web apps homepage
@@ -134,3 +131,8 @@ def searched_words_stats():
     all_searched_words = get_all_searched_words()
     c_searched_list = Counter(all_searched_words)
     return c_searched_list
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
