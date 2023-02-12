@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from src.db_functions import add_a_new_user, username_and_password_match, get_user_by_id, get_user_by_column, \
     does_user_exist, check_if_valid_email, check_if_valid_username, check_if_valid_password, check_if_valid_date, check_if_valid_name
 from src.daily_words import randomWordGenerator
