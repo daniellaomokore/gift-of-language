@@ -36,19 +36,9 @@ The app hopes to achieve this by providing a unique word each day along with the
 ⬇️<b>Installation:</b>
 
 <i>Before running the app, you must</i>:
-* run the SQL file in MYSQL in order to USE our created database
-* ensure your computer has installed all the python packages we use in our project, these are as follows:
-                          * requests
-                          * mysql.connector
-                          * flask
-                          * schedule
-                          * time
-                          * itertools
-                          * re
-                          * random
-                          * datetime/Delta
-                          * collections - Counter
-                          
+* run the `gol_users.sql` file in MYSQL in order to USE our created database
+
+* Install the dependencies by running `pip install -r requirements.txt` in the terminal or command prompt on your system.
                         
 * have your config file with USER, PASSWORD and HOST details
 
