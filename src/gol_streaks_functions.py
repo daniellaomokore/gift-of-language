@@ -1,5 +1,5 @@
 import mysql.connector
-from config import USER, HOST, PASSWORD
+from config import USER, HOST, DATABASEPASSWORD
 from datetime import datetime, timedelta, date
 from db_functions import _connect_to_db, db_connection_decorator
 
