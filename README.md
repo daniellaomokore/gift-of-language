@@ -35,20 +35,19 @@ The app hopes to achieve this by providing a unique word each day along with the
 
 ⬇️<b>Installation:</b>
 
-<i>Before running the app, you must</i>:
-* run the `gol_users.sql` file in MYSQL in order to USE our created database
+✨<b>How to Run:</b>
 
 * Install the dependencies by running `pip install -r requirements.txt` in the terminal or command prompt on your system.
+
+* run the `gol_users.sql` file in MYSQL in order to USE our created database
                         
-* have your config file with USER, PASSWORD and HOST details
+* set up your environmental variables in a '.env' file in the root. With variables for USER = "[your MYSQL user]", DATABASEPASSWORD = "[your MYSQL password]" ,HOST = "[your MYSQL host]" and SECRET_KEY = "[your secret key]"
 
-
-✨<b>How to Run:</b>
 
 <i>The gift of Language app can either be run through the python console OR using an API we have created:</i>
 
-* If the user choses to run the app through the python console on Pycharm, they can do this by running the main.py file.
-* If they would like to run the app through the FLASK web app (, they can do this by running the GOL_api.py) and then clicking this link: http://127.0.0.1:5001
+* Run `run --app run --debug run --reload` in the terminal of the root directory of the project or run the 'GOL_api.py' file in the flask directory  directly and then click the link: http://127.0.0.1:5000.
+
 * There is also a secret page on the Web App where you can see all the statistics for the searched words across users . Link: http://127.0.0.1:5001/searched-words-statistics
 
 
